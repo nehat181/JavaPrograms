@@ -23,9 +23,7 @@ public class SmallestSubarray {
 
 			}
 
-
-
-		}  
+	}  
 
 
 		return min;
