@@ -1,0 +1,253 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x643f3f4f, pid=15400, tid=0x00004230
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_181-b13) (build 1.8.0_181-b13)
+# Java VM: Java HotSpot(TM) Client VM (25.181-b13 mixed mode windows-x86 )
+# Problematic frame:
+# V  [jvm.dll+0xb3f4f]
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0282e400):  VMThread [stack: 0x04a40000,0x04a90000] [id=16944]
+
+siginfo: ExceptionCode=0xc0000005, reading address 0x676e06ea
+
+Registers:
+EAX=0x000000f0, EBX=0x14e3a875, ECX=0x14e3a910, EDX=0x0282de10
+ESP=0x04a8fae0, EBP=0x04a8faf0, ESI=0x04a8fb24, EDI=0x03020302
+EIP=0x643f3f4f, EFLAGS=0x00010212
+
+Top of Stack: (sp=0x04a8fae0)
+0x04a8fae0:   14e3a910 00000004 00000036 000000f0
+0x04a8faf0:   04a8fb58 644747a6 14e3a910 00000002
+0x04a8fb00:   00000002 14e3b6a8 0282e400 0000004b
+0x04a8fb10:   0000004d 00000070 00000036 64490000
+0x04a8fb20:   00000036 14e3a910 0282e400 0000004d
+0x04a8fb30:   0000004d 00000070 00000036 027a0000
+0x04a8fb40:   00000036 14e3ab90 00000001 00000001
+0x04a8fb50:   14e3aba0 000b0009 04a8fb9c 64467543 
+
+Instructions: (pc=0x643f3f4f)
+0x643f3f2f:   8b d8 0f b6 03 3d ca 00 00 00 75 0a 53 51 e8 6e
+0x643f3f3f:   66 fc ff 83 c4 08 8b 3c 85 38 00 6c 64 89 45 fc
+0x643f3f4f:   0f b6 87 e8 03 6c 64 83 e0 0f 75 32 0f b6 03 8b
+0x643f3f5f:   0e 3d ca 00 00 00 75 0a 53 51 e8 42 66 fc ff 83 
+
+
+Register to memory mapping:
+
+EAX=0x000000f0 is an unknown value
+EBX=0x14e3a875 is pointing into metadata
+ECX={method} {0x14e3a914} 'wordgenerateForward' '(Ljava/lang/String;)Ljava/lang/String;' in 'important/WordGeneratorFromAGivenWord'
+EDX=0x0282de10 is an unknown value
+ESP=0x04a8fae0 is an unknown value
+EBP=0x04a8faf0 is an unknown value
+ESI=0x04a8fb24 is an unknown value
+EDI=0x03020302 is an unknown value
+
+
+Stack: [0x04a40000,0x04a90000],  sp=0x04a8fae0,  free space=318k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0xb3f4f]
+V  [jvm.dll+0x1347a6]
+V  [jvm.dll+0x127543]
+V  [jvm.dll+0x12b16b]
+V  [jvm.dll+0x12b639]
+V  [jvm.dll+0x184b5b]
+V  [jvm.dll+0x183f71]
+V  [jvm.dll+0x184387]
+V  [jvm.dll+0x184582]
+V  [jvm.dll+0x1c5416]
+C  [msvcr100.dll+0x5c556]
+C  [msvcr100.dll+0x5c600]
+C  [KERNEL32.DLL+0x16359]
+C  [ntdll.dll+0x67b74]
+C  [ntdll.dll+0x67b44]
+
+VM_Operation (0x1580f7c4): RedefineClasses, mode: safepoint, requested by thread 0x15096800, redefining class important.WordGeneratorFromAGivenWord
+
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x150ca800 JavaThread "Service Thread" daemon [_thread_blocked, id=12080, stack(0x15a00000,0x15a50000)]
+  0x150af400 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=13696, stack(0x15970000,0x159c0000)]
+  0x150a4000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=16652, stack(0x158e0000,0x15930000)]
+  0x1509f000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=11968, stack(0x15850000,0x158a0000)]
+  0x15096800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=13384, stack(0x157c0000,0x15810000)]
+  0x1509b000 JavaThread "Attach Listener" daemon [_thread_blocked, id=7324, stack(0x153f0000,0x15440000)]
+  0x15097000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=10316, stack(0x15360000,0x153b0000)]
+  0x1507c400 JavaThread "Finalizer" daemon [_thread_blocked, id=16448, stack(0x04b60000,0x04bb0000)]
+  0x15066000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16612, stack(0x04ad0000,0x04b20000)]
+  0x02a3cc00 JavaThread "main" [_thread_blocked, id=6448, stack(0x00da0000,0x00df0000)]
+
+Other Threads:
+=>0x0282e400 VMThread [stack: 0x04a40000,0x04a90000] [id=16944]
+  0x150b9400 WatcherThread [stack: 0x15a90000,0x15ae0000] [id=12072]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x02a3b4a0] Threads_lock - owner thread: 0x0282e400
+
+Heap:
+ def new generation   total 4928K, used 530K [0x04c00000, 0x05150000, 0x0a150000)
+  eden space 4416K,  12% used [0x04c00000, 0x04c84908, 0x05050000)
+  from space 512K,   0% used [0x05050000, 0x05050000, 0x050d0000)
+  to   space 512K,   0% used [0x050d0000, 0x050d0000, 0x05150000)
+ tenured generation   total 10944K, used 0K [0x0a150000, 0x0ac00000, 0x14c00000)
+   the space 10944K,   0% used [0x0a150000, 0x0a150000, 0x0a150200, 0x0ac00000)
+ Metaspace       used 1759K, capacity 2312K, committed 2368K, reserved 4480K
+
+Card table byte_map: [0x028f0000,0x02980000] byte_map_base: 0x028ca000
+
+Polling page: 0x00ab0000
+
+CodeCache: size=32768Kb used=667Kb max_used=667Kb free=32100Kb
+ bounds [0x02a40000, 0x02ae8000, 0x04a40000]
+ total_blobs=143 nmethods=14 adapters=69
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.496 Thread 0x150af400   10             java.lang.Character::toLowerCase (9 bytes)
+Event: 0.496 Thread 0x150af400 nmethod 10 0x02ae5a88 code [0x02ae5b90, 0x02ae5c38]
+Event: 0.496 Thread 0x150af400   11             java.lang.CharacterDataLatin1::toLowerCase (39 bytes)
+Event: 0.496 Thread 0x150af400 nmethod 11 0x02ae5cc8 code [0x02ae5dc0, 0x02ae5ea0]
+Event: 0.496 Thread 0x150af400   12             java.lang.AbstractStringBuilder::ensureCapacityInternal (27 bytes)
+Event: 0.497 Thread 0x150af400 nmethod 12 0x02ae5f88 code [0x02ae60a0, 0x02ae6268]
+Event: 0.497 Thread 0x150af400   13             java.lang.AbstractStringBuilder::append (29 bytes)
+Event: 0.497 Thread 0x150af400 nmethod 13 0x02ae6388 code [0x02ae64a0, 0x02ae66a8]
+Event: 0.497 Thread 0x150af400   14             java.lang.String::indexOf (166 bytes)
+Event: 0.498 Thread 0x150af400 nmethod 14 0x02ae6848 code [0x02ae6960, 0x02ae6bb0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (10 events):
+Event: 333.053 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=3
+Event: 464.645 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=4
+Event: 482.244 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=5
+Event: 491.340 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=6
+Event: 575.934 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=7
+Event: 591.108 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=8
+Event: 1370.521 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=9
+Event: 1434.686 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=10
+Event: 1713.408 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=11
+Event: 1848.922 Thread 0x0282e400 redefined class name=important.WordGeneratorFromAGivenWord, count=12
+
+Internal exceptions (2 events):
+Event: 0.152 Thread 0x02a3cc00 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x04c06ea8) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u181\11358\hotspot\src\share\v
+Event: 0.152 Thread 0x02a3cc00 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x04c07178) thrown at [C:\workspace\8-2-build-windows-i586-cygwin\jdk8u181\11358\hotspot\src\share\vm\prims\jni.cpp, l
+
+Events (10 events):
+Event: 1713.475 Executing VM operation: ChangeBreakpoints done
+Event: 1848.922 Executing VM operation: RedefineClasses
+Event: 1848.922 Executing VM operation: RedefineClasses done
+Event: 1848.928 Executing VM operation: ChangeBreakpoints
+Event: 1848.935 Executing VM operation: ChangeBreakpoints done
+Event: 1848.940 Executing VM operation: ChangeBreakpoints
+Event: 1848.940 Executing VM operation: ChangeBreakpoints done
+Event: 1848.945 Executing VM operation: ChangeBreakpoints
+Event: 1848.945 Executing VM operation: ChangeBreakpoints done
+Event: 3112.697 Executing VM operation: RedefineClasses
+
+
+Dynamic libraries:
+0x00c80000 - 0x00cb3000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\javaw.exe
+0x77b60000 - 0x77cfa000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x758f0000 - 0x759d0000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x773c0000 - 0x775be000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x75a60000 - 0x75ad9000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x77a90000 - 0x77b4f000 	C:\WINDOWS\System32\msvcrt.dll
+0x77730000 - 0x777a6000 	C:\WINDOWS\System32\sechost.dll
+0x77280000 - 0x7733b000 	C:\WINDOWS\System32\RPCRT4.dll
+0x75330000 - 0x75350000 	C:\WINDOWS\System32\SspiCli.dll
+0x75320000 - 0x7532a000 	C:\WINDOWS\System32\CRYPTBASE.dll
+0x75380000 - 0x753df000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x770a0000 - 0x77237000 	C:\WINDOWS\System32\USER32.dll
+0x76520000 - 0x76537000 	C:\WINDOWS\System32\win32u.dll
+0x758c0000 - 0x758e1000 	C:\WINDOWS\System32\GDI32.dll
+0x754b0000 - 0x7560a000 	C:\WINDOWS\System32\gdi32full.dll
+0x75790000 - 0x7580c000 	C:\WINDOWS\System32\msvcp_win.dll
+0x75620000 - 0x7573f000 	C:\WINDOWS\System32\ucrtbase.dll
+0x65340000 - 0x6554f000 	C:\WINDOWS\WinSxS\x86_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.720_none_2e6bec9c2790ac71\COMCTL32.dll
+0x76210000 - 0x76485000 	C:\WINDOWS\System32\combase.dll
+0x75350000 - 0x75375000 	C:\WINDOWS\System32\IMM32.DLL
+0x59150000 - 0x5920f000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\msvcr100.dll
+0x64340000 - 0x64713000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\client\jvm.dll
+0x77350000 - 0x77356000 	C:\WINDOWS\System32\PSAPI.DLL
+0x6ea90000 - 0x6ea98000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x75220000 - 0x75228000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x760b0000 - 0x7610e000 	C:\WINDOWS\System32\WS2_32.dll
+0x73fb0000 - 0x73fd4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x73f60000 - 0x73f83000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x75a20000 - 0x75a5b000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x64b00000 - 0x64b0c000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\verify.dll
+0x64980000 - 0x649a2000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\java.dll
+0x59120000 - 0x5914b000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\jdwp.dll
+0x59430000 - 0x59437000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\npt.dll
+0x648a0000 - 0x648b4000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\zip.dll
+0x765a0000 - 0x76b1a000 	C:\WINDOWS\System32\SHELL32.dll
+0x777b0000 - 0x77834000 	C:\WINDOWS\System32\shcore.dll
+0x75ae0000 - 0x760a5000 	C:\WINDOWS\System32\windows.storage.dll
+0x77260000 - 0x7727b000 	C:\WINDOWS\System32\profapi.dll
+0x753e0000 - 0x75423000 	C:\WINDOWS\System32\powrprof.dll
+0x76c30000 - 0x76c3d000 	C:\WINDOWS\System32\UMPDC.dll
+0x75740000 - 0x75784000 	C:\WINDOWS\System32\shlwapi.dll
+0x77840000 - 0x7784f000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x77a50000 - 0x77a63000 	C:\WINDOWS\System32\cryptsp.dll
+0x59110000 - 0x59118000 	C:\Program Files (x86)\Provar2.0.3.09\jre\bin\dt_socket.dll
+0x594e0000 - 0x594f1000 	C:\WINDOWS\system32\napinsp.dll
+0x594c0000 - 0x594d6000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x594b0000 - 0x594c0000 	C:\WINDOWS\system32\wshbth.dll
+0x59490000 - 0x594a6000 	C:\WINDOWS\system32\NLAapi.dll
+0x73fe0000 - 0x74012000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x6f330000 - 0x6f382000 	C:\WINDOWS\System32\mswsock.dll
+0x74020000 - 0x740b1000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x75610000 - 0x75617000 	C:\WINDOWS\System32\NSI.dll
+0x59480000 - 0x5948b000 	C:\WINDOWS\System32\winrnr.dll
+0x65ca0000 - 0x65cf1000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x77a70000 - 0x77a89000 	C:\WINDOWS\System32\bcrypt.dll
+0x6f320000 - 0x6f328000 	C:\Windows\System32\rasadhlp.dll
+0x6f8f0000 - 0x6fa7f000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:50065 -Dfile.encoding=Cp1252 
+java_command: important.WordGeneratorFromAGivenWord
+java_class_path (initial): C:\Programs\progt\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Provar2.0.3.09\jre
+PATH=C:/Program Files (x86)/Provar2.0.3.09/jre/bin/client;C:/Program Files (x86)/Provar2.0.3.09/jre/bin;C:/Program Files (x86)/Provar2.0.3.09/jre/lib/i386;C:\Users\neha.tiwari\Downloads\apache-ant-1.9.14-bin\apache-ant-1.9.14\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Windows\System32;C:\Users\neha.tiwari\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Provar2.0.3.09\jre\bin;D:\Salesforce CLI\bin;C:\Users\neha.tiwari\AppData\Roaming\npm;C:\Program Files\Salesforce CLI\bin;C:\Users\neha.tiwari\AppData\Local\Yarn\bin;C:\Users\neha.tiwari\Documents\Data\eclipse;
+USERNAME=neha.tiwari
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.329)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 11, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16646668k(9496152k free), swap 28705292k(20179296k free)
+
+vm_info: Java HotSpot(TM) Client VM (25.181-b13) for windows-x86 JRE (1.8.0_181-b13), built on Jul  7 2018 03:18:20 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Fri Apr 10 21:45:32 2020
+elapsed time: 3112 seconds (0d 0h 51m 52s)
+
