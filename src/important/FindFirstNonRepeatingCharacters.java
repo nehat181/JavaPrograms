@@ -9,7 +9,6 @@ import java.util.Set;
 public class FindFirstNonRepeatingCharacters {
 
 	
-	
 	public static Character findValue(String s){
 		Character output = null;
 		Map<Character,Integer> hm=new LinkedHashMap<Character,Integer>();

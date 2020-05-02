@@ -7,6 +7,7 @@ public class NonRepeatingCharInSubString {
 	
 	
 	public static void main(String[] a){
+	
 		
 		String str = "GeeksForGeeks"; 
         int n = str.length(); 

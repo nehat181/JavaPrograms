@@ -23,28 +23,14 @@ public class Findmaximumsumsubarrayofaparticularsize{
 				break;
 				}
 				sum+=arr[end];
-				
 			}
-			
-			
-			
-			
 		
-		//}
 		System.out.println("maxsum "+ maxsum);
 	}
-
-	
-	
-	
-	
-	
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		int arr[]={2, 3, 4, 5, 7};//6
+		int arr[]={2, 3, 4, 5, 7};//16
 		int k=3;
 		int[] arr1={1, 4, 2, 10, 23, 3, 1, 0, 20};//39
 		int k1=4;
@@ -52,7 +38,9 @@ public class Findmaximumsumsubarrayofaparticularsize{
 		int k2=2;
 		
 		
-		findmaxsum(arr2,k2);
+		
+		
+		findmaxsum(arr,k);
 		
 		
 		

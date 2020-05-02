@@ -55,7 +55,7 @@ public class ReverseWordInASentence{
 	
 	public static String revWordUsingSB(String s){
 		String output="";
-		
+	
 		String[] words=s.split("\\s");
 		for(int i=0;i<words.length;i++){
 						

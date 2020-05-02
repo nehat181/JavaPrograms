@@ -93,6 +93,8 @@ public class ProductArrayExceptitself {
 		System.out.println();
 		product2(arr);
 		
+		
+		
 	}
 
 }
