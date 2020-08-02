@@ -31,6 +31,7 @@ class SecondHighestSalary {
 		// TODO Auto-generated method stub
 		
 		int arr[]={1000,3000,500,9000,2000,7000,1500,8000,2500};
+		
 		findSecond(arr);
 
 }

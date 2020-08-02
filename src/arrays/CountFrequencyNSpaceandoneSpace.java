@@ -3,6 +3,7 @@ package arrays;
 import java.util.HashMap;
 
 public class CountFrequencyNSpaceandoneSpace {
+	//0 space and O(1)
 	
 	public static void freHM(int arr[]){
 		
@@ -37,26 +38,32 @@ public class CountFrequencyNSpaceandoneSpace {
 	//o{n) and 1 space comp
 	 static void findCounts(int arr[], int n)  
     { 
-        for(int i=0;i<n;i++){
-        	
-        	int index=Math.abs(arr[i]);
-        	
-        	arr[index]=-arr[index];
-        	if(arr[index]>1){
-        		System.out.println("Dupicate number"+Math.abs((arr[index])));
-        	}
-        	System.out.println(arr[index]);
-        	
-        }
+			
+			  for(int i=0;i<n;i++){
+			  
+			  int index=Math.abs(arr[i]);
+			  
+			  arr[index]=-arr[index]; if(arr[index]>1){
+			  System.out.println("Dupicate number"+Math.abs((arr[index]))); }
+			  
+			  System.out.println(arr[index]);
+			  
+			 
+			 
+			  }
+		 
+		 
     }
     	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int arr[] = {2, 3, 3, 2, 4};
+		int arr[] = {2, 3, 3, 2, 4,4};
 		findCounts(arr,arr.length);   
-		freHM(arr);
-	}
+		//freHM(arr);
+		
+	
 
+}
 }

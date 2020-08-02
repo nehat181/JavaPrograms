@@ -1,5 +1,10 @@
 package arrays;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class ProductArrayExceptitself {
 	
 	
@@ -93,7 +98,8 @@ public class ProductArrayExceptitself {
 		System.out.println();
 		product2(arr);
 		
-		
+		  
+
 		
 	}
 

@@ -87,11 +87,52 @@ public class SubArraywithGivenSum {
 		
 		 
 	        int arr[] = {15, 2, 4, 8, 9, 5, 10, 23}; 
-	        int n = arr.length; 
-	        int sum = 33; 
-	        findSub(arr,n,sum);
+	        int nums[] = {1,2,3}; 
+	        int k=3;
+//	        int n = arr.length; 
+//	        int sum = 33; 
+//	        findSub(arr,n,sum);
 	     //   arraysum.subArraySum(arr, n, sum); 
-
-	}
-
+	        
+	        
+	        
+	        int sum=0;
+	        
+	        int count=0;
+	        int start=0;
+	        int end=0;
+	             
+	        while(end<nums.length){
+	        	
+	        	if(nums[end]==k) {
+	        		
+	        		start++;
+	        		count++;
+	        		end++;
+	        		}
+	        	
+	        	if(end>nums.length-1) break;
+	        	sum+=nums[end];
+	        	if(sum==k) {
+	        		count++;
+	        		sum-=nums[start];
+	        		start++;
+	        		
+	        		
+	        		
+	        	}
+	        	end++;
+	        	
+	        	
+	        	
+	        	
+	        	}
+	        	
+	        	
+	      
+	      
+	        System.out.println(count);
+	        
+	       
+}
 }

@@ -1,31 +1,42 @@
+
 package arrays;
 
 public class Findmaximumsumsubarrayofaparticularsize{
 	
 	
 	public static void findmaxsum(int [] arr,int sub){
+			
+		int max=0;
 		int sum=0;
-		int maxsum=0;
 		int start=0;
-		int end=sub-1;;
-		//while(i<arr.length){
-		for(int i=0;i<sub;i++){
+		int end=sub;
+		
+	
+		for(int i=0;i<sub;i++) {
+			
 			sum+=arr[i];
 		}
-			while(sum>maxsum){
-				maxsum=sum;
-				sum-=arr[start];
-				start++;
-				
-				end++;
-							
-				if(end==arr.length){
-				break;
-				}
-				sum+=arr[end];
-			}
 		
-		System.out.println("maxsum "+ maxsum);
+		while(start<end) {
+		if(sum>max) {
+			max=sum;
+		}
+		if(end>=arr.length) {
+			break;
+		}
+		
+		sum-=arr[start];
+		sum+=arr[end];
+		start++;
+		end++;
+		
+		
+		
+		
+		}
+		System.out.println(max);
+		
+		
 	}
 	
 	
@@ -40,7 +51,7 @@ public class Findmaximumsumsubarrayofaparticularsize{
 		
 		
 		
-		findmaxsum(arr,k);
+		findmaxsum(arr2,k2);
 		
 		
 		

@@ -58,7 +58,7 @@ public static void main(String[] args) {
 		int rotation=2;
 		
 		rotarr(arr,rotation);
-	
+	    
 }	
 
 }

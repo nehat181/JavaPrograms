@@ -8,7 +8,7 @@ public class MaxSumSubArray {
 	   for(int i=1;i<n;i++){
 		 		   
 		 if(arr[i]>CurSum+arr[i])  {
-			 System.out.println(CurSum+arr[i]);
+			
 			 CurSum=arr[i];
 			 
 		 }else{
