@@ -1,63 +1,53 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-class A{
-	public void m(){
-		
-		
-	}
+public class snippet{
+
 	
-}
-class B extends A{
-	
-public void m(){
-		
-		
-	}
-}
+	 public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+	        boolean res=false;
+	        if (k==0) return false;
+	        if(nums.length==0||nums.length==1) return false;
+	        for(int i=0;i<nums.length;i++){
+	            
+	            
+	            for(int j=i+1;j<=i+k;j++){
+	                if(j>=nums.length) break;
+	                int s=nums[i]-nums[j];
+	                int y=Math.abs(s);
+	              if(Math.abs(s)<=t){
+	                    res=true;
+	               
+	                }
+	                
+	            }
+	        }
+	            
+	            
+	            
+	        
+	        return res;
+	        
+	    }
 
 
-
-public class snippet {
 	
-	
-	public void m(Object i)
-		{
-		
-		System.out.println("Object");
-		}
-	
-	public void m(String s)
-	{
-	
-	System.out.println("String");
-	}
-	
-	public static int i;
 	//public  static Object myObj;
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		String s="welcome to india";
-     List<Character> ar;
-		String arr[]=s.split(" ");
-		for(int i=arr.length-1;i>=0;i--) {
-			ar=new LinkedList<Character>();
-			String word=arr[i];
-			for(int j=0;j<word.length();j++) {
-			  ar.add(word.charAt(j));
-			}
-			
-			
-			
-		Collections.sort(ar);
-		for(int y=0;y<ar.size();y++) {
-			System.out.print(ar.get(y));
-		}
-		   System.out.print(" ");
-	}
+		
+				
+		  Deque<String> dq 
+          = new ArrayDeque<String>(); 
+dq.add("test");
+      // add() method to insert 
+      
+      System.out.println(dq);
+      System.out.println(dq.pop());
+      System.out.println(dq);
 
-		  
-}
+	}
 }

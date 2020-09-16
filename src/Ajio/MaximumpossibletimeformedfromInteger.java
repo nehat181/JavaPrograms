@@ -1,36 +1,56 @@
 package Ajio;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+
 public class MaximumpossibletimeformedfromInteger {
 	
 	
-	public static void findTime(int [] input){
-				String hour="";
-				String Prehour="";//{1,2,3,4,2}
-		for(int i=0;i<input.length-2;i++){
-			for(int j=i+1;j<input.length;j++){
-			  String A=String.valueOf(input[i]);
-			  String B=String.valueOf(input[j]);
-			 
-			  if((A+B).compareTo(B+A)>=1){
-				  if(Integer.parseInt(A)<3){
-					  hour=A+B;
-					  if(Prehour.compareTo(hour)<1){
-						 Prehour=hour;  
-					  }
-				    	  }
-			  }
-		}
-		}
-		System.out.println(hour);
-		
-		
+	public static String findTime(int [] input){
+		String ans="";
+			for(int i=0;i<input.length;i++) {
+				for(int j=0;j<input.length;j++) {
+					for(int k=0;k<input.length;k++) {
+						
+						if(i==k||i==j||j==k)continue;
+						int l=6-i-j-k;
+						
+						String h=""+input[i]+input[j];
+						String m=""+input[k]+input[l];
+						String time=h+":"+m;
+						if(h.compareTo("24")<0&&m.compareTo("60")<0&&time.compareTo(ans)>0) {
+							ans=time;
+						}
+						
+					}
+				}
+				
+			}
+				return ans;
 	}
+	public static int[] etf(int n){
+        int[] dp=new int[n+1];
+        for(int i=1;i<=n;i++){
+            dp[i]=i;
+        }
+        for(int i=2;i<=n;i++){
+          if(dp[i]==i){
+              for(int j=i;j<=n;j+=i){
+                  dp[j]=dp[j]-(dp[j]/i);
+              }
+          }
+        }
+
+        return dp;
+  }
 	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-      int[] input={1,2,3,4,2};//1234--23:41
-       findTime(input);
+      int[] input={1,2,3,4};//1234--23:41
+     System.out.println(etf(5));
+     String time= findTime(input);
+     System.out.println(time);
      
 	}
 

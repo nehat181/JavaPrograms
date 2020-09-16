@@ -15,9 +15,10 @@ public class FindSumbetweentwoIndex {
 		
 	}
 	public static int sum(int [] arr,int left,int right,int n){
-	
+		if(left==0) {return arr[right];}
+		else {
 		return arr[right]-arr[left-1];
-		
+		}
 		
 	}
 	
@@ -27,8 +28,12 @@ public class FindSumbetweentwoIndex {
 		
 		 int arr[] = {10, 20, 10, 5, 15};
 		 int[] pre=pre(arr);
-	int sum=	sum(pre,2,4,arr.length);
+		 int left=0;
+		 int right=3;
+		 
+	int sum=	sum(pre,left,right,arr.length);
 	System.out.println(sum);
+	
 	   
 }
 

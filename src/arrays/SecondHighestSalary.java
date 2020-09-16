@@ -3,22 +3,19 @@ package arrays;
 class SecondHighestSalary {
 	
 	public static int findSecond(int[] arr){
-		int first=arr[0],second=arr[0];
+		int first=Integer.MIN_VALUE,second=Integer.MIN_VALUE;
 		
-		for(int i=1;i<arr.length;i++){
+		for(int i=0;i<arr.length;i++){
    			if(arr[i]>first){
+   				second=first;
 		      first=arr[i];
 			}
+   			else if(arr[i]>second) {
+   				second=arr[i];
+   			}
 		}
 		
-		for(int i=1;i<arr.length;i++){
-			if(arr[i]>second&&arr[i]<first){
-				
-				second=arr[i];
-			}
-			
-			
-		}
+		
 		
 		System.out.println(second);
 		return second;
@@ -30,7 +27,7 @@ class SecondHighestSalary {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int arr[]={1000,3000,500,9000,2000,7000,1500,8000,2500};
+		int arr[]={1000,3000,500,9200,2000,9150,6000,1500,9000,2500};
 		
 		findSecond(arr);
 

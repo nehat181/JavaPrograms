@@ -96,10 +96,24 @@ public class SortCharactersByFrequency {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s="Aabb";//bbAa
-System.out.println(new SortCharactersByFrequency().frequencySortLeet(s));
+		String s="Aabbcc";//bbAa
+//System.out.println(new SortCharactersByFrequency().frequencySortLeet(s));
 		//char[] s1= {'H','a','n','n','a','h'};
-		
+		int sum=0;
+		int a=3;
+		while(sum++<3) {
+			int b=(1+2*sum)%3;
+			switch(b) {
+			default:
+			case 0:
+				a-=1;
+				break;
+			case 1:
+				a+=5;
+			
+			}
+		}
+		System.out.println(a);
 	}
 
 }

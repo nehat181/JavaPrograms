@@ -67,7 +67,7 @@ public class StringPermutation {
         outputStream.close();*/
 		
 		
-		write();
+		permutation("", "abc");
 		
 		
 	}

@@ -21,7 +21,7 @@ public String addBinary(String a, String b) {
 	String out="";
 	
 	sum=converttodecimal(a)+converttodecimal(b);
-	System.out.println(sum);
+	
 	
 	while(sum!=0) {
 		output+=String.valueOf(sum%2);

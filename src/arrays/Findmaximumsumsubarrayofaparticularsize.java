@@ -47,10 +47,7 @@ public class Findmaximumsumsubarrayofaparticularsize{
 		int k1=4;
 		int[] arr2={100, 200, 300, 400};//700
 		int k2=2;
-		
-		
-		
-		
+			
 		findmaxsum(arr2,k2);
 		
 		

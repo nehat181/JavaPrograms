@@ -28,23 +28,13 @@ public class ArraySubsequentDifference {
 
 		
 		int [] arr= {5,10,15,20,25};
-		//System.out.println(sub(arr));;
-		int num=109;
-		 
-		if (num == 0) {
-			System.out.println(0);
-		};
-        if (num % 9 == 0) {
-        	
-        	System.out.println(9);
-        }
-        System.out.println(num % 9);
-        }
-        
+		System.out.println(sub(arr));;
+		
         
         
       
 	
 
 	
+}
 }

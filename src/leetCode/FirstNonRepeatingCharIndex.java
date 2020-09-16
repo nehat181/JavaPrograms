@@ -60,7 +60,7 @@ public class FirstNonRepeatingCharIndex {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		findIndex("ccrr");
+		findIndex("aA");
 
 	}
 

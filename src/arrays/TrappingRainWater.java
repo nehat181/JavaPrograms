@@ -122,7 +122,7 @@ public class TrappingRainWater {
 
 		//int arr[] = { 3, 0, 1, 1, 2 };
 		int arr[] = { 1, 2, 1,3, 1 };
-		calcwater(arr);
+		//calcwater(arr);
 		UnitofWater(arr);
 
 	}
