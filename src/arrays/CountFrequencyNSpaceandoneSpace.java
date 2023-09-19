@@ -60,8 +60,7 @@ public class CountFrequencyNSpaceandoneSpace {
 		// TODO Auto-generated method stub
 		
 		int arr[] = {2, 3, 3, 2, 4,4};
-		findCounts(arr,arr.length);   
-		//freHM(arr);
+         freHM(arr);
 		
 	
 
