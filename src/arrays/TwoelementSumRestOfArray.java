@@ -91,8 +91,9 @@ public class TwoelementSumRestOfArray {
 		// TODO Auto-generated method stub
 		
 		int arr[] = {2, 11, 5, 1, 4, 7};
-       findpair(arr);
-		//findpairHAshSet(arr,arr.length);
+       //findpair(arr);
+		findpairHAshSet(arr,arr.length);
+       //1, 2, 3   5,4,3
 	}
 
 }

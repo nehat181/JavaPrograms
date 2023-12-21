@@ -52,7 +52,7 @@ public class FindallSubarrayswithGivensum {
 		int sum=0;
 		li =new FindallSubarrayswithGivensum().getSubarray(arr,sum);
 		
-		System.out.println(li);
+		//System.out.println(li);
 	}
 
 	

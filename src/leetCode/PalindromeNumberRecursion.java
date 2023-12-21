@@ -22,7 +22,7 @@ public class PalindromeNumberRecursion {
 		return recur(x,0,String.valueOf(x).length()-1 ); 
 				
 	    }
-	 
+	 	 
 	 public static boolean recur(int x, int l, int r) {
 		 
 				 

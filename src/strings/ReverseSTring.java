@@ -3,8 +3,13 @@ package strings;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Stack;
 import java.util.TimeZone;
+
+import ThoughtWorks.Test;
 
 public class ReverseSTring {
 	
@@ -21,7 +26,12 @@ public class ReverseSTring {
 		}
 		
 		
+		
+		
 	}
+	
+
+	 
 
 	public static void main(String[] args) {
 		/*// TODO Auto-generated method stub
@@ -30,57 +40,10 @@ public class ReverseSTring {
 		
 		//System.out.println("Hello".substring(1));
 
-		Calendar calendar = Calendar.getInstance(TimeZone.getDefault());
-	   
-	  
-	   int weekday = calendar.get(Calendar.DAY_OF_WEEK);
-	   
-	   if (weekday != Calendar.MONDAY)
-	   {
-		   
-	       // calculate how much to add
-	       // the 2 is the difference between Saturday and Monday
-		   
-	       int days = (Calendar.SATURDAY - weekday + 2) %7;
-	     
-	       calendar.add(Calendar.DAY_OF_YEAR, days);
-	       
-	       // now is the date you want
-		   Date date = calendar.getTime();
-		   String format = new SimpleDateFormat("dd-MM-yyyy").format(date);
-		   
-		   System.out.println(format);
-	   }
-	   
-	   else{
-		   
-		   calendar.add(Calendar.DAY_OF_YEAR, 7);
-		   Date  date1 = calendar.getTime();
-String format = new SimpleDateFormat("dd-MM-yyyy").format(date1);
-		   
-		   System.out.println(format);
-		   
-		   
-		   
-	   }
-	  
-	   
-	   
-	   
-	  
-		   
-	   }
-	/*   switch(day){
-	   
-	   case "Monday": 
-            		   
-	   
-	   
-	   }*/
-	   
-	   
+		
 		
 		
 	}
+}
 
 
