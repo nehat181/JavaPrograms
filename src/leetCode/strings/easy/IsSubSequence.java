@@ -36,11 +36,13 @@ public class IsSubSequence {
 	      }
 	    return true;
 	}
+	
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s = "acb";
+		String s = "axc";
 		String t = "ahbgdc";
-		System.out.println(new IsSubSequence().isSubsequence(s, t));
+		System.out.println(new IsSubSequence().isSubsequence1(s, t));
 	}
 
 }

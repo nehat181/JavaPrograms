@@ -1,4 +1,4 @@
-package leetCode.linkedlist.medium;
+	package leetCode.linkedlist.medium;
 
 public class SwapNodesInPair {
 	ListNode head=null;

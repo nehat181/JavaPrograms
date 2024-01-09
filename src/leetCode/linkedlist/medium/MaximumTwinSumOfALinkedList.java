@@ -72,6 +72,43 @@ public class MaximumTwinSumOfALinkedList {
 		}
 		return max;
 	}
+	 public int pairSum1(ListNode head) {
+	        ListNode dummy=new ListNode(0,head);
+	        ListNode prev=null;
+	        ListNode slow=head;
+	        ListNode fast=head;
+	        while(fast!=null&&fast.next!=null){
+	            prev=slow;
+	            slow=slow.next;
+	            fast=fast.next.next;
+	        }
+	        prev.next=null;
+	        int max=0;
+	        ListNode node1=reverse(slow);
+	        while(head.next!=null){
+	            System.out.println(head.val);
+	            System.out.println(node1.val);
+	         int curr=head.val+node1.val;
+	         max=Math.max(curr,max);
+	         head=head.next;
+	         node1=node1.next;
+	        }
+	        return max;   
+	    }
+
+	    public ListNode reverse(ListNode node){
+	        ListNode prev=null;
+	        ListNode curr=node;
+	        ListNode next=null;
+	        while(curr!=null){
+	            next=curr.next;
+	            curr.next=prev;
+	            prev=curr;
+	            curr=next;
+	        }
+	        return prev;
+
+	    }
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -85,7 +122,7 @@ public class MaximumTwinSumOfALinkedList {
 
 		li.display(li.head);
 		
-		int ans=li.pairSum(li.head);
+		int ans=li.pairSum1(li.head);
 		System.out.println(ans);
 
 	}

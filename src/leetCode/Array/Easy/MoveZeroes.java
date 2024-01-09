@@ -1,4 +1,4 @@
-package leetCode;
+package leetCode.Array.Easy;
 
 public class MoveZeroes {
 	 public static void moveZeroes(int[] nums) {

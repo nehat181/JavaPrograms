@@ -41,6 +41,7 @@ public class FindAllAnagramsInAString {
 		// TODO Auto-generated method stub
 		List<Integer> li=new FindAllAnagramsInAString().findAnagrams("cbaebabacd","abc");
 		System.out.println(li);
+		List<List<String>> ans=new ArrayList<List<String>>();
 	}
 
 }
