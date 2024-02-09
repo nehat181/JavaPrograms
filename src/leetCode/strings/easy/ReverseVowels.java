@@ -1,5 +1,8 @@
 package leetCode.strings.easy;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class ReverseVowels {
 
 	public boolean isVowel(Character c){
@@ -62,6 +65,7 @@ public class ReverseVowels {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String s="hello";
+		Arrays.sort(s.toCharArray());
 		System.out.println(new ReverseVowels().reverseVowels(s));
 	}
 

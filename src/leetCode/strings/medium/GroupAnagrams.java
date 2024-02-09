@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GroupAnagrams {
 
@@ -19,7 +20,12 @@ public class GroupAnagrams {
                 }
                 hm.get(val).add(s);
 			}
-		 return new ArrayList(hm.values());
+		return new ArrayList(hm.values());
+		
+//		 List<List<String>> li = new ArrayList<>();
+//	        for(Map.Entry<String,List<String>> entry:hm.entrySet()){
+//	         li.add(entry.getValue());
+//	        }
 
 		
 	}
