@@ -30,36 +30,11 @@ public class StringCompression {
 	        return next;
     }
 	
-	public int compress1(char[] chars) {
-        int count=1;
-        StringBuffer sb=new StringBuffer();
-        char c=chars[0];
-        sb.append(c);
-        
-        for(int i=1;i<chars.length;i++){
-          if(c==chars[i]){
-              count++;
-          }
-          else{
-        	  if(count!=1) {
-              sb.append(count);
-        	  }
-              c=chars[i];
-              sb.append(c);
-              count=1;
-          }
-        }
-        if(count!=1)
-        sb.append(count);
-        String ans=sb.toString();
-        return ans.length();
-        
-    }
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		char[] c= {'a','b','b','b','b','b','b','b','b','b','b','b','b'};
+		char[] c= {'a','a','b','b','c','c','c'};
 		System.out.println(new StringCompression().compress(c));
 
 	}
