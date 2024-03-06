@@ -60,21 +60,19 @@ public class RemoveNthNodeFromEndofList {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		RemoveNthNodeFromEndofList li=new RemoveNthNodeFromEndofList();
-		//		li.insert(1);
-		//		li.insert(2);
-		//		li.insert(3);
-		//		li.insert(4);
-		//		li.insert(5);
-		//		int node=2;
+			li.insert(1);
+			li.insert(2);
+     		li.insert(3);
+			li.insert(4);
+			li.insert(5);
+			int node=2;
 
-		//		li.insert(1);
-		//		int node=1;
 		//		li.display(li.head);
 
-		li.insert(1);
-		li.insert(2);
-		int node=2;
-		li.display(li.head);
+//		li.insert(1);
+//		li.insert(2);
+//		int node=2;
+//		li.display(li.head);
 
 		ListNode ans=li.removeNthFromEnd(li.head, node);
 		li.display(ans);
